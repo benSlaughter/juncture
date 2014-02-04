@@ -25,6 +25,14 @@ class Juncture
     @current_state = new_state
   end
 
+  def next
+    if index.nil? || @states[index+1].nil?
+      @current_state = @states[0]
+    else
+      @current_state = @states[index+1]
+    end
+  end
+
   def ==(value)
     @current_state == value
   end

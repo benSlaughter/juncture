@@ -42,6 +42,40 @@ describe Juncture do
   	end
   end
 
+  describe '#next' do
+    it 'moves the state forward one step' do
+      temp = Juncture.new 1, 2, 3, default: 1
+      expect(temp.next).to eq 2
+      expect(temp.state).to eq 2
+      expect(temp.next).to eq 3
+      expect(temp.state).to eq 3
+    end
+
+    it 'resets if on final state' do
+      temp = Juncture.new 1, 2, 3, default: 2
+      expect(temp.next).to eq 3
+      expect(temp.state).to eq 3
+      expect(temp.next).to eq 1
+      expect(temp.state).to eq 1
+    end
+
+    it 'resets if default is nil' do
+      temp = Juncture.new 1, 2, 3
+      expect(temp.next).to eq 1
+      expect(temp.state).to eq 1
+      expect(temp.next).to eq 2
+      expect(temp.state).to eq 2
+    end
+
+    it 'resets if default is not a state' do
+      temp = Juncture.new 1, 2, 3, default: 4
+      expect(temp.next).to eq 1
+      expect(temp.state).to eq 1
+      expect(temp.next).to eq 2
+      expect(temp.state).to eq 2
+    end
+  end
+
   describe '#==' do
     it 'returns true if matching' do
       temp = Juncture.new 1, 2, 3, default: 2

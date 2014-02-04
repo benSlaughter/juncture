@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'juncture/version'
 
 Gem::Specification.new do |spec|
-  spec.name         = 'Juncture'
+  spec.name         = 'juncture'
   spec.summary      = 'Simple state object'
   spec.description  = 'A State object that can be queried'
   spec.homepage     = 'http://benslaughter.github.io/juncture/'
