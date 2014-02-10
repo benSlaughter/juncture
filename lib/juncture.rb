@@ -24,6 +24,7 @@ class Juncture
     raise "UNKNOWN STATE: %s" % new_state unless @states.include? new_state
     @current_state = new_state
   end
+  alias_method :is, :set
 
   def next
     if index.nil? || @states[index+1].nil?
