@@ -79,72 +79,72 @@ describe Juncture do
   describe '#==' do
     it 'returns true if matching' do
       temp = Juncture.new 1, 2, 3, default: 2
-      expect(temp == 2).to be_true
+      expect(temp == 2).to be true
     end
 
     it 'returns false if not matching' do
       temp = Juncture.new 1, 2, 3, default: 2
-      expect(temp == 1).to be_false
+      expect(temp == 1).to be false
     end
   end
 
   describe '#===' do
     it 'returns true if matching' do
       temp = Juncture.new 1, 2, 3, default: 2
-      expect(temp === 2).to be_true
+      expect(temp === 2).to be true
     end
 
     it 'returns false if not matching' do
       temp = Juncture.new 1, 2, 3, default: 2
-      expect(temp === 1).to be_false
+      expect(temp === 1).to be false
     end
   end
 
   describe '#<' do
     it 'returns true if matching' do
       temp = Juncture.new 1, 2, 3, default: 2
-      expect(temp < 3).to be_true
+      expect(temp < 3).to be true
     end
 
     it 'returns false if not matching' do
       temp = Juncture.new 1, 2, 3, default: 2
-      expect(temp < 2).to be_false
+      expect(temp < 2).to be false
     end
   end
 
   describe '#<=' do
     it 'returns true if matching' do
       temp = Juncture.new 1, 2, 3, default: 2
-      expect(temp <= 2).to be_true
+      expect(temp <= 2).to be true
     end
 
     it 'returns false if not matching' do
       temp = Juncture.new 1, 2, 3, default: 2
-      expect(temp <= 1).to be_false
+      expect(temp <= 1).to be false
     end
   end
 
   describe '#>' do
     it 'returns true if matching' do
       temp = Juncture.new 1, 2, 3, default: 2
-      expect(temp > 1).to be_true
+      expect(temp > 1).to be true
     end
 
     it 'returns false if not matching' do
       temp = Juncture.new 1, 2, 3, default: 2
-      expect(temp > 2).to be_false
+      expect(temp > 2).to be false
     end
   end
 
   describe '#>=' do
     it 'returns true if matching' do
       temp = Juncture.new 1, 2, 3, default: 2
-      expect(temp >= 2).to be_true
+      expect(temp >= 2).to be true
     end
 
     it 'returns false if not matching' do
       temp = Juncture.new 1, 2, 3, default: 2
-      expect(temp >= 3).to be_false
+      expect(temp >= 3).to be false
     end
   end
 

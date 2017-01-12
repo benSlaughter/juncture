@@ -43,19 +43,19 @@ class Juncture
   end
 
   def <(value)
-    @states[index+1..-1].include? value
+    index < @states.index(value)
   end
 
   def <=(value)
-    @states[index..-1].include? value
+    index <= @states.index(value)
   end
 
   def >(value)
-    @states[0..index-1].include? value
+    index > @states.index(value)
   end
 
   def >=(value)
-    @states[0..index].include? value
+    index >= @states.index(value)
   end
 
   private
